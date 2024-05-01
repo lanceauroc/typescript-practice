@@ -1,4 +1,12 @@
 let employee: {
-    id: number,
-    name?: string // made optional
-} = { id: 1, name: ''}; // Cannot be set to null or undefined, you may use ''
+    readonly id: number,
+    name: string,
+    retire: (date: Date) => void // this is the object's signature (what it expects)
+} = { 
+    id: 1, 
+    name: 'Lance', 
+    retire: (date: Date) => {
+        console.log(date);
+    } 
+};
+
