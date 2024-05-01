@@ -4,4 +4,6 @@ function calculateTax(income: number, taxYear = 2022): number {
     return income * 1.3;
 }
 
-calculateTax(30_000);
+let result = 0;
+result = calculateTax(30_000);
+console.log(result);
