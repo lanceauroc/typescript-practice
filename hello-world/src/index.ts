@@ -8,3 +8,5 @@ function kgToLbs(weight: number | string): number { // declaring a union type
 
 kgToLbs(10);
 kgToLbs('10kg');
+
+// union type is not part of js code
