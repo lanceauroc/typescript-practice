@@ -1,13 +1,10 @@
-type Employee = { // Type alias was defined
-    readonly id: number,
-    name: string,
-    retire: (date: Date) => void
+function kgToLbs(weight: number | string): number { // declaring a union type
+    // Narrowing
+    if (typeof weight === 'number')
+        return weight * 2.2;
+    else
+        return parseInt(weight) * 2.2;
 }
 
-let employee: Employee = {
-    id: 1, 
-    name: 'Lance', 
-    retire: (date: Date) => {
-        console.log(date);
-    } 
-}
+kgToLbs(10);
+kgToLbs('10kg');
