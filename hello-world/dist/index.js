@@ -1,12 +1,8 @@
 "use strict";
-function kgToLbs(weight) {
-    // Narrowing
-    if (typeof weight === 'number')
-        return weight * 2.2;
-    else
-        return parseInt(weight) * 2.2;
+function getCustomer(id) {
+    return id === 0 ? null : { birthday: new Date() };
 }
-kgToLbs(10);
-kgToLbs('10kg');
-// union type is not part of js code
+let customer = getCustomer(1);
+// optional property access operator; '?' then '.' chaining operator
+console.log(customer === null || customer === void 0 ? void 0 : customer.birthday); // gets executed if customer is not null or not undefined
 //# sourceMappingURL=index.js.map
