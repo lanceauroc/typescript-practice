@@ -1,8 +1,11 @@
-function greet(name: string | null) {
-    if (name)
-        console.log(name.toUpperCase());
-    else
-        console.log('Hola!');
+type Customer = {
+    birthday: Date
+};
+
+function getCustomer(id: number): Customer | null {
+    return id === 0 ? null : { birthday: new Date() };
 }
 
-greet(null); /// null value can be passed, but not undefined
+let customer = getCustomer(0);
+if (customer !== null && customer !== undefined) 
+    console.log(customer.birthday);
