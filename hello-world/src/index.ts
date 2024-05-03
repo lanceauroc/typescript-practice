@@ -1,5 +1,5 @@
 type Customer = {
-    birthday: Date
+    birthday?: Date
 };
 
 function getCustomer(id: number): Customer | null {
@@ -7,6 +7,16 @@ function getCustomer(id: number): Customer | null {
 }
 
 let customer = getCustomer(1);
-// optional property access operator; '?' then '.' chaining operator
-console.log(customer?.birthday); // gets executed if customer is not null or not undefined
+console.log(customer?.birthday?.getFullYear()); // only gets executed if customer exists AND has a birthday
 
+// optional element access operator ; used with arrays
+// if (customer !== null && customers !== undefined)
+//      customers.[0]
+
+
+// customers?.[0]
+
+// Optional call
+//let log: any = (message: string) => console.log(message)
+let log: any = null;
+log?.('a'); // executes only if it references an actual function
