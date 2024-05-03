@@ -1,8 +1,5 @@
-// Literal (exact, specific value)
-// let quantity:100 | 150 = 150;
+function greet(name: string) {
+    console.log(name.toUpperCase());
+}
 
-type Quantity = 50 | 100; // a new type is defined
-let quantity: Quantity = 100; // initalize the value of quantity
-
-type Metric = 'cm' | 'inch';
-
+greet(null); // can be disabled via strictNullChecks on tsconfig; but don't
