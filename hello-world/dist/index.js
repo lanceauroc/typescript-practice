@@ -8,4 +8,5 @@ function kgToLbs(weight) {
 }
 kgToLbs(10);
 kgToLbs('10kg');
+// union type is not part of js code
 //# sourceMappingURL=index.js.map

@@ -1,12 +1,16 @@
-function kgToLbs(weight: number | string): number { // declaring a union type
-    // Narrowing
-    if (typeof weight === 'number')
-        return weight * 2.2;
-    else
-        return parseInt(weight) * 2.2;
+type Draggable = {
+    drag: () => void
+};
+
+type Resizable = {
+    resize: () => void
+};
+
+// using an intersection type
+
+type UIWidget = Draggable & Resizable;
+
+let textBox: UIWidget = {
+    drag: () => {},
+    resize: () => {}
 }
-
-kgToLbs(10);
-kgToLbs('10kg');
-
-// union type is not part of js code
