@@ -1,16 +1,7 @@
-type Draggable = {
-    drag: () => void
-};
+// Literal (exact, specific value)
+// let quantity:100 | 150 = 150;
 
-type Resizable = {
-    resize: () => void
-};
+type Quantity = 50 | 100;
+let quantity: Quantity = 100;
 
-// using an intersection type
 
-type UIWidget = Draggable & Resizable;
-
-let textBox: UIWidget = {
-    drag: () => {},
-    resize: () => {}
-}
