@@ -1,5 +1,8 @@
-function greet(name: string) {
-    console.log(name.toUpperCase());
+function greet(name: string | null) {
+    if (name)
+        console.log(name.toUpperCase());
+    else
+        console.log('Hola!');
 }
 
-greet(null); // can be disabled via strictNullChecks on tsconfig; but don't
+greet(null); /// null value can be passed, but not undefined
